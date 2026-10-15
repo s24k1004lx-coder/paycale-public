@@ -1,0 +1,27 @@
+# PayCale 配信版 Push/カレンダーWorker (個人用Workerとは完全に別プロジェクト)
+name = "paycale-push-public"
+main = "index.js"
+compatibility_date = "2024-12-01"
+# web-push が node:crypto / node:https 等を使うために必要
+compatibility_flags = ["nodejs_compat"]
+
+# 5分おきに通知判定(リマインダー・シフト前通知・予算超過・固定費)
+[triggers]
+crons = ["*/5 * * * *"]
+
+[vars]
+# フロントの PUSH_VAPID_PUBLIC (public/index.html) と必ず同じ値にする
+VAPID_PUBLIC = "BGIBEt4K2aCUHc_KkFcMLz7DHi2sOz9p3zCL2_OkH17yLwlhZWqvurYl7PgCkvKlb6REjeQGi29A4lQl65t1gAU"
+# VAPIDの連絡先(Push配信サービスが問題時に連絡する宛先)。自分のメールに書き換える
+VAPID_SUBJECT = "mailto:YOUR-EMAIL@example.com"
+# 公開後にアプリのURLへ絞る(例: "https://paycale-public.pages.dev")。空なら全許可(*)
+ALLOWED_ORIGIN = ""
+
+# VAPID_PRIVATE は秘密鍵なのでここには書かない:
+#   npx wrangler secret put VAPID_PRIVATE
+
+# KVネームスペースを作成したら、出力された id をここに貼る:
+#   npx wrangler kv namespace create SUBS
+[[kv_namespaces]]
+binding = "SUBS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"

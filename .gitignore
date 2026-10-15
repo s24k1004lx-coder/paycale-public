@@ -1,0 +1,10 @@
+node_modules/
+.dev.vars
+.wrangler/
+android/android.keystore
+android/*.keystore
+android/*.jks
+android/build/
+android/app-release*.apk
+android/app-release*.aab
+android/local.properties

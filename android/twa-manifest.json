@@ -1,0 +1,33 @@
+{
+  "packageId": "com.example.paycale",
+  "host": "your-domain.example.com",
+  "fullScopeUrl": "https://your-domain.example.com/",
+  "name": "PayCale",
+  "launcherName": "PayCale",
+  "display": "standalone",
+  "themeColor": "#f97316",
+  "navigationColor": "#f97316",
+  "backgroundColor": "#f8fafc",
+  "startUrl": "/index.html",
+  "iconUrl": "https://your-domain.example.com/icon-512.png",
+  "maskableIconUrl": "https://your-domain.example.com/icon-512-maskable.png",
+  "shortcuts": [],
+  "generatorApp": "bubblewrap",
+  "webManifestUrl": "https://your-domain.example.com/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableNotifications": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "orientation": "portrait",
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shareTarget": null
+}

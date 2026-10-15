@@ -1,0 +1,2 @@
+# ローカル確認用 (wrangler dev)。コピーして .dev.vars にリネームして使う。.dev.vars はコミットしない
+VAPID_PRIVATE=ここにVAPID秘密鍵
